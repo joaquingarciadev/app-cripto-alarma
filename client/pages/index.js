@@ -83,9 +83,9 @@ export default function Home() {
     }, [criptos]);
 
     const getCriptos = async () => {
-        const res = await fetch("https://api.pancakeswap.info/api/v2/tokens");
+        const res = await fetch(process.env.NEXT_PUBLIC_API_URL);
         const data = await res.json();
-        setCriptos(Object.values(data.data));
+        setCriptos(data);
         setLoading(false);
     };
 
