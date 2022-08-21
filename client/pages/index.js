@@ -11,7 +11,7 @@ export default function Home() {
     const [inputPrice, setInputPrice] = useState("");
     const [criptoSelect, setCriptoSelect] = useState(null);
     const [alarms, setAlarms] = useState([]);
- 
+
     useEffect(() => {
         setLoading(true);
         getCriptos();
@@ -156,16 +156,26 @@ export default function Home() {
                                                     }}
                                                     value={inputCripto}
                                                     required
+                                                    ref={(e) => {
+                                                        showList && e && e.focus();
+                                                    }}
+                                                    onBlur={() => {
+                                                        setTimeout(() => {
+                                                            setShowList(false);
+                                                        }, 150);
+                                                    }}
                                                 />
                                                 <div
                                                     onClick={() => {
-                                                        setShowList(!showList);
+                                                        setTimeout(() => {
+                                                            setShowList(!showList);
+                                                        }, 100);
                                                     }}
                                                     className="position-absolute"
                                                     style={{
                                                         top: "50%",
-                                                        right: "10px",
                                                         transform: "translateY(-50%)",
+                                                        right: "10px",
                                                         color: "#aaa",
                                                         cursor: "pointer",
                                                     }}
@@ -177,7 +187,6 @@ export default function Home() {
                                                 <div
                                                     className="list-group position-absolute w-100"
                                                     style={{
-                                                        zIndex: 10000,
                                                         height: "200px",
                                                         overflowY: "auto",
                                                     }}
