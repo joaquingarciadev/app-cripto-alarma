@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aplicación de Cripto Alarma
 
-## Getting Started
+Esta es una aplicación web desarrollada en Next.js que te permite establecer alarmas para criptomonedas. Aprendí a hacer una API con Next.js y también a realizar scraping dentro de ella. Cuando el precio de una criptomoneda alcanza el valor establecido, recibirás una alerta.
 
-First, run the development server:
+## Características
 
-```bash
+- Muestra una lista de criptomonedas disponibles.
+- Permite establecer alarmas con un precio objetivo para cada criptomoneda seleccionada.
+- Actualiza automáticamente los precios de las criptomonedas cada minuto.
+- Notifica al usuario cuando una alarma se ha cruzado, es decir, cuando el precio de la criptomoneda alcanza o supera el valor establecido.
+- Permite eliminar alarmas.
+
+## Capturas de Pantalla
+
+![Captura de Pantalla 1](/screenshots/screenshot1.png)
+_Imagen: Formulario para establecer una alarma._
+
+![Captura de Pantalla 2](/screenshots/screenshot2.png)
+_Imagen: Lista de alarmas establecidas._
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local.
+2. Asegúrate de tener [Node.js](https://nodejs.org) instalado.
+3. Abre una terminal en la carpeta raíz del proyecto.
+4. Ejecuta el siguiente comando para instalar las dependencias del proyecto:
+```bash	
+npm install
+```
+5. Inicia la aplicación con el siguiente comando:
+```bash	
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Abre tu navegador web y visita `http://localhost:3000`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Tecnologías Utilizadas
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Next.js
+- React
+- HTML
+- CSS
+- JavaScript
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contribuir
 
-## Learn More
+¡Las contribuciones son bienvenidas! Si tienes alguna idea, sugerencia o encuentras algún error, no dudes en abrir un [issue](https://github.com/joaquingarciadev/app-cripto-alarma/issues) o enviar una solicitud de [pull request](https://github.com/joaquingarciadev/app-cripto-alarma/pulls).
 
-To learn more about Next.js, take a look at the following resources:
+## Licencia
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este proyecto está bajo la [Licencia MIT](LICENSE).
