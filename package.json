@@ -25,12 +25,12 @@
   "main": "next.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/djoako22/app-cripto-alarma.git"
+    "url": "git+https://github.com/joaquingarciadev/app-cripto-alarma.git"
   },
   "author": "Joaquin Garcia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/djoako22/app-cripto-alarma/issues"
+    "url": "https://github.com/joaquingarciadev/app-cripto-alarma/issues"
   },
-  "homepage": "https://github.com/djoako22/app-cripto-alarma#readme"
+  "homepage": "https://github.com/joaquingarciadev/app-cripto-alarma#readme"
 }
