@@ -2,6 +2,9 @@ import axios from "axios";
 const cheerio = require("cheerio");
 
 export default async function handler(req, res) {
+  if (req.query.key !== process.env.NEXT_PUBLIC_KEY) {
+    return res.status(401).send("Unauthorized");
+  }
   try {
     const toNumber = (string) => {
       return parseFloat(string.replace("$", "").replace(",", ""));

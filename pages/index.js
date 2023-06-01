@@ -63,7 +63,7 @@ export default function Home() {
 
   const getCriptos = async () => {
     try {
-      const res = await fetch("/api/coins");
+      const res = await fetch("/api/coins?key=" + process.env.NEXT_PUBLIC_KEY);
       const data = await res.json();
       setCriptos(data);
       setLoading(false);
