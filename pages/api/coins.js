@@ -16,13 +16,13 @@ export default async function handler(req, res) {
     $("table tbody tr").each((id, elem) => {
       if (
         $(elem).find(".cmc-table__column-name--name.cmc-link").text() !== ""
-      ) {
+        ) {
         criptos.push({
           name: $(elem).find(".cmc-table__column-name--name.cmc-link").text(),
           symbol: $(elem)
             .find(".cmc-table__cell--sort-by__symbol > div")
             .text(),
-          price: toNumber($(elem).find(".clgqXO .cmc-link span").text()),
+          price: toNumber($(elem).find("td .cmc-link span").text()),
         });
       }
     });
